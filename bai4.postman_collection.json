@@ -1,0 +1,207 @@
+{
+  "info": {
+    "_postman_id": "45ac48ec-ce90-431f-8eee-ed926c4ddf56",
+    "name": "bai 5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51874648",
+    "_collection_link": "https://go.postman.co/collection/51874648-45ac48ec-ce90-431f-8eee-ed926c4ddf56?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"sonbui\",\r\n    \"password\":\"sonbui\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"sonbui\",\r\n    \"password\":\"sonbui\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb25idWkiLCJpYXQiOjE3ODA4MzkxNDMsImV4cCI6MTc4MDg0MDA0M30.y0PE_ckaX3-e4T0Z1xRr7020Qqc40E7todLuzfZ9kWa7bi6VIXcmzJVrqcfGTqLU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/study/my-progress",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "study",
+            "my-progress"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "refresh",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"token\":\"31a31ba4-bb62-44fc-b506-516f7ee4f79f\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/refresh",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb25idWkiLCJpYXQiOjE3ODA4MzgyODMsImV4cCI6MTc4MDg0MTg4M30.OqvSH-9DES8rP0Nj3d8EeLqZRuaITeCLUJ4I2bL4CXZzd9bpTEMOFLpo0lSSf_H7",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/auth/logout",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get certificate",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb25idWkiLCJpYXQiOjE3ODA4MzkxNDMsImV4cCI6MTc4MDg0MDA0M30.y0PE_ckaX3-e4T0Z1xRr7020Qqc40E7todLuzfZ9kWa7bi6VIXcmzJVrqcfGTqLU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/study/1/claim-certificate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "study",
+            "1",
+            "claim-certificate"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
